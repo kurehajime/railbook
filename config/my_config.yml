@@ -1,0 +1,19 @@
+COMMONS: &COMMON
+  author: "kurehajime"
+
+  logo:
+    source: "https://pbs.twimg.com/profile_images/1213801367/exitnon_400x400.png"
+    width: 400
+    height: 400
+  
+development:
+  hoge: "dev"
+  <<: *COMMON
+
+test:
+  hoge: "test"
+  <<: *COMMON
+
+production:
+  hoge: "piyo"
+  <<: *COMMON
