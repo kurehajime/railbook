@@ -1,0 +1,23 @@
+<%= form_with(model: @book) do |f| %>
+    <div class ="field">
+        <%=f.label :isbn%> <br>
+        <%=f.text_field :isbn ,size: 25%>
+    </div>
+    <div class="field">
+        <label> 
+        <%=f.check_box :dl ,{class: 'chk'} ,'yes' ,'no'%>
+        ダウンロードサンプルあり
+        </label><br>
+    </div>
+    <div class ="field">
+        <%=f.label :publish%> <br>
+        <%=f.collection_select :publish ,@books,:publish,:publish,
+        {include_blank: '選択して下さい',class: 'pub'}
+        %><br>
+    </div>
+    
+中略
+    <div class="actions">
+        <%=f.submit%>
+    </div>
+<%end%>
